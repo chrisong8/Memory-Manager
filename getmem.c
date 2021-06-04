@@ -4,7 +4,7 @@
 #include "mem.h"
 #include "mem_impl.h"
 
-#define BLOCK 100000
+#define BLOCK 10000000
 
 void* getmem(uintptr_t size) {
   check_heap();
