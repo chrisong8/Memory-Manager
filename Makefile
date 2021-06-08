@@ -1,4 +1,3 @@
-
 bench: bench.o freemem.o get_mem_stats.o getmem.o mem_utils.o print_heap.o
 	gcc -Wall -std=c99 -g -o bench bench.o freemem.o get_mem_stats.o getmem.o mem_utils.o print_heap.o
 

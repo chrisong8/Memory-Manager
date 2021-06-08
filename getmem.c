@@ -1,10 +1,9 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "mem.h"
 #include "mem_impl.h"
 
-#define BLOCK 10000000
+#define FIRST_BLOCK 72000
 
 void* getmem(uintptr_t size) {
   check_heap();
@@ -27,9 +26,9 @@ void* getmem(uintptr_t size) {
     head = head->next;
   }
   if (!head) {
-    uintptr_t more = blockSize + HEADERSIZE + BLOCK + BOUND;
+    uintptr_t more = blockSize + HEADERSIZE + FIRST_BLOCK + BOUND;
     head = (FreeNode*) malloc(more);
-    head->size = blockSize + BLOCK;
+    head->size = blockSize + FIRST_BLOCK;
     head->next = NULL;
     totalSize += more;
     insert(head);

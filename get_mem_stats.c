@@ -14,7 +14,6 @@ void get_mem_stats(uintptr_t* total_size,
 		   uintptr_t* n_free_blocks){
   //not sure how to ensure we keep 
   FreeNode* temp = freeList;
-  uintptr_t totsize = 0;
   uintptr_t totfree = 0;
   uintptr_t numblocks = 0;
   while(temp != NULL){
@@ -22,7 +21,7 @@ void get_mem_stats(uintptr_t* total_size,
     numblocks++;
     temp = temp->next;
   }
-  *total_size = totsize;
+  *total_size = totfree * numblocks;
   *total_free = totfree;
   *n_free_blocks = numblocks;
   

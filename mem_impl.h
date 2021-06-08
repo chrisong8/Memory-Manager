@@ -1,5 +1,5 @@
 /*
- * Header file containing decleration of function used internally 
+ * Header file containing declaration of function used internally 
  * in the memory manager implementaion
  */
 
@@ -8,10 +8,9 @@
 #include <stdint.h>
 
 
-#define MIN_SIZE 96
-// sizeof(uintptr), just making life easier
+#define MIN_SIZE 7200
 #define HEADERSIZE 16
-#define BOUND 16
+#define BOUND 8
 
 // data structure for a single block of memory
 typedef struct FreeNode {

@@ -4,7 +4,7 @@
 #include <time.h> //for random_seed
 #include "mem.h"
 
-// execute large number of calls to freemem and getmem
+// excecute large number of calls to freemem and getmem
 // implement --> bench [ntrials] [pctget] [pctlarge] [small_limit] [large_limit] [random_seed]
 int main(int argc, char** argv){
   int ntrials = 10000;
@@ -75,9 +75,9 @@ int main(int argc, char** argv){
       get_mem_stats(&total_size, &total_free, &n_free_blocks);
       clock_t curr = clock() - t;
       printf("Total CPU time: %f seconds \n", ((float)curr)/CLOCKS_PER_SEC);
-      printf("Total ammount of storage acquired: %ld \n",total_size);
+      printf("Total amount of storage acquired: %ld \n",total_size);
       printf("Blocks on free list: %ld \n", n_free_blocks);
-      printf("Avereage number of bytes in free storage blocks: %f \n\n", total_free / (double) n_free_blocks); 
+      printf("Average number of bytes in free storage blocks: %f \n\n", total_free / (double) n_free_blocks); 
     }
 
   }

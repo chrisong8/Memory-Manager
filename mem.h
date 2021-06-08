@@ -1,4 +1,6 @@
-
+/* 
+ * Header file containing declarations of the functions of the memory manager
+ */
 
 #ifndef MEM_H
 #define MEM_H
@@ -12,8 +14,8 @@ void* getmem(uintptr_t size);
 void freemem(void* p);
 
 // Stores statistics about the current state of the memory amnager
-// total_size - total ammount of bytes
-// tota_free - total ammount of storage in bytes that is on the free list
+// total_size - total amount of bytes
+// total_free - total amount of storage in bytes that is on the free list
 // n_free_blocks - total numer of blocks stored on the free list
 void get_mem_stats(uintptr_t* total_size,
 		   uintptr_t* total_free,
